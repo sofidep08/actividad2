@@ -128,3 +128,14 @@ def menu():
             raza = input("Raza: ")
             edad = input("Edad: ")
             vet.registrar_mascota(nombre_cliente, nombre, especie, raza, edad)
+        elif opcion == "3":
+            nombre_cliente = input("Nombre del cliente: ")
+            nombre_mascota = input("Nombre de la mascota: ")
+            motivo = input("Motivo de la cita: ")
+            diagnostico = input("Diagnóstico: ")
+            vet.agendar_cita(nombre_cliente, nombre_mascota, motivo, diagnostico)
+
+        elif opcion == "4":
+            nombre_cliente = input("Nombre del cliente: ")
+            nombre_mascota = input("Nombre de la mascota: ")
+            vet.mostrar_historial(nombre_cliente, nombre_mascota)
