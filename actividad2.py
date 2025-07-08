@@ -102,3 +102,29 @@ class Veterinaria:
             print(cliente)
             for mascota in cliente.get_mascotas():
                 print("  -", mascota)
+
+def menu():
+    vet = Veterinaria()
+    opcion = 0
+    while opcion!=6 :
+        print("[1] Registrar nuevo cliente")
+        print("[2] Registrar nueva mascota")
+        print("[3] Agendar cita médica")
+        print("[4] Ver historial de citas")
+        print("[5] Ver clientes y mascotas")
+        print("[6] Salir")
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            nombre = input("Nombre del cliente: ")
+            telefono = input("Teléfono: ")
+            correo = input("Correo: ")
+            vet.registrar_cliente(nombre, telefono, correo)
+
+        elif opcion == "2":
+            nombre_cliente = input("Nombre del cliente: ")
+            nombre = input("Nombre de la mascota: ")
+            especie = input("Especie: ")
+            raza = input("Raza: ")
+            edad = input("Edad: ")
+            vet.registrar_mascota(nombre_cliente, nombre, especie, raza, edad)
