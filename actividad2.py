@@ -128,6 +128,7 @@ def menu():
             raza = input("Raza: ")
             edad = input("Edad: ")
             vet.registrar_mascota(nombre_cliente, nombre, especie, raza, edad)
+
         elif opcion == "3":
             nombre_cliente = input("Nombre del cliente: ")
             nombre_mascota = input("Nombre de la mascota: ")
@@ -139,3 +140,16 @@ def menu():
             nombre_cliente = input("Nombre del cliente: ")
             nombre_mascota = input("Nombre de la mascota: ")
             vet.mostrar_historial(nombre_cliente, nombre_mascota)
+
+        elif opcion == "5":
+            vet.mostrar_clientes_y_mascotas()
+
+        elif opcion == "6":
+            print("SALIENDO DEL MENÚ...")
+            break
+
+        else:
+            print("Ingreso un dato incorrecto")
+
+        if __name__ == "__main__":
+            menu()
